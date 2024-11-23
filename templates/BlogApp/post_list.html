@@ -9,4 +9,6 @@
         <p id='date'>Published on {{post.publish}} by {{post.author|title}}</p>
         {{post.body| truncatewords:10|linebreaks}}
     {%endfor%}
+    {%include 'BlogApp/pagination.html' with page=post_list%}
+
 {%endblock%}
